@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<!-- ==========================================================
+     ARQUIVO: index.html — Atual Fashion Regiana
+     Aqui ficam os CONTEÚDOS (textos, fotos, produtos). Cores: css/style.css.
+     Telefone e frases do WhatsApp: js/config.js. Para ver os espaços vazios: index.html?editar
+     ========================================================== -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- INÍCIO: SEO -->
+  <title>Atual Fashion Regiana — Moda feminina e vestidos em Goiânia</title>
+  <meta name="description" content="Atual Fashion Regiana: vestidos e moda feminina na Av. Goiás, Setor Norte Ferroviário, Goiânia - GO. Monte seu pedido e finalize pelo WhatsApp.">
+  <meta property="og:title" content="Atual Fashion Regiana">
+  <meta property="og:description" content="Moda feminina e vestidos em Goiânia. Peça pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <!-- ÍCONE DA ABA DO NAVEGADOR (logo do vestido rosa) — arquivos: favicon.ico e pasta img/ -->
+  <link rel="icon" type="image/svg+xml" href="fotos/logo/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="fotos/logo/logo.png">
+  <link rel="shortcut icon" href="fotos/logo/logo.png">
+  <link rel="apple-touch-icon" href="fotos/logo/logo.png">
+  <meta name="theme-color" content="#F02D83">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- INÍCIO: BARRA SUPERIOR (as informações vêm do js/config.js) -->
+  <div class="topo"><div class="faixa" id="faixa"></div></div>
+  <!-- INÍCIO: CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="container">
+      <!-- NOME DA LOJA (para usar logotipo: troque o texto por <img src="img/logo.png" alt="Atual Fashion Regiana" height="40">) -->
+      <a class="marca" href="#inicio">Atual Fashion Regiana</a>
+      <!-- BUSCA DO CABEÇALHO (usa as mesmas sugestões do catálogo) -->
+      <form class="busca-topo" role="search" onsubmit="return false"><input id="busca-topo" type="search" list="sugestoes" autocomplete="off" placeholder="Buscar produtos" aria-label="Buscar produtos"></form>
+      <nav aria-label="Principal">
+        <ul class="menu" id="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#sobre">Sobre a loja</a></li>
+          <li><a href="#ajuda">Ajuda</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="acoes">
+        <a href="#" class="btn btn-zap" data-zap>WhatsApp</a>
+        <button class="pill-sacola" id="btn-sacola" type="button" aria-label="Abrir carrinho"><span class="contador" id="contador">0</span><span class="pill-txt"><small>Sua sacola</small><strong id="pill-total">R$ 0,00</strong></span></button>
+        <button class="btn-menu" id="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+  <!-- FIM: CABEÇALHO -->
+
+  <main>
+    <!-- INÍCIO: BANNERS (preencha data-img com a foto; banner sem foto não aparece) -->
+    <section class="banners" id="banners" hidden aria-label="Destaques da loja">
+      <div class="container"><div class="car">
+        <div class="car-trilho" id="car-trilho" tabindex="0">
+          <!-- BANNER 1: data-img (desktop), data-img-mobile (celular), data-titulo, data-subtitulo, data-link -->
+          <a class="slide" data-img="" data-img-mobile="" data-titulo="" data-subtitulo="" data-link=""></a>
+          <!-- BANNER 2 -->
+          <a class="slide" data-img="" data-img-mobile="" data-titulo="" data-subtitulo="" data-link=""></a>
+          <!-- BANNER 3 -->
+          <a class="slide" data-img="" data-img-mobile="" data-titulo="" data-subtitulo="" data-link=""></a>
+        </div>
+        <button class="car-seta ant" id="car-ant" type="button" aria-label="Banner anterior">‹</button>
+        <button class="car-seta prox" id="car-prox" type="button" aria-label="Próximo banner">›</button>
+      </div></div>
+    </section>
+    <!-- FIM: BANNERS -->
+
+    <!-- INÍCIO: CATEGORIAS EM CÍRCULOS (criado automaticamente a partir dos setores com produtos) -->
+    <section class="secao circulos" id="circulos" hidden aria-label="Categorias"><div class="container"><div class="circ-lista" id="circ-lista"></div></div></section>
+    <!-- FIM: CATEGORIAS EM CÍRCULOS -->
+
+    <!-- INÍCIO: HERO -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div>
+          <!-- EDITE O TÍTULO, A FRASE E A DESCRIÇÃO AQUI -->
+          <h1>Atual Fashion Regiana</h1>
+          <p>Vestidos e moda feminina para você se sentir elegante em cada ocasião. Escolha suas peças e finalize seu pedido pelo WhatsApp.</p>
+          <div class="botoes">
+            <a class="btn" href="#catalogo">Ver os vestidos</a>
+            <a class="btn btn-claro" href="#contato">Falar com a loja</a>
+          </div>
+        </div>
+        <!-- ADICIONE A FOTO PRINCIPAL AQUI: troque o texto por <img src="img/destaque.jpg" alt="Vestido em destaque"> -->
+        <!-- Esta foto troca sozinha a cada 10 segundos, passando por todos os vestidos publicados -->
+        <div class="hero-foto" id="hero-foto">Foto de destaque</div>
+      </div>
+    </section>
+    <!-- FIM: HERO -->
+
+    <!-- INÍCIO: CATÁLOGO DE VESTIDOS -->
+    <section class="secao" id="catalogo">
+      <div class="container">
+        <h2>Catálogo</h2>
+        <!-- ==========================================================
+             INÍCIO: GUIA DE TAMANHOS
+             COMO USAR: coloque a foto na pasta img e escreva o caminho em data-img
+             (ex.: data-img="img/guia-tamanhos.jpg"). Sem foto, este bloco fica escondido.
+             ========================================================== -->
+        <details class="guia" id="guia-tamanhos" data-img="fotos/guiatamanho/guia2.jpg">
+          <summary>Guia de tamanhos — veja como escolher o seu</summary>
+          <div class="guia-corpo">
+            <!-- DICA OPCIONAL: escreva aqui um textinho (ex.: "Meça o busto, a cintura e o quadril"). Pode deixar vazio. -->
+            <p class="guia-texto"></p>
+            <!-- A FOTO APARECE AQUI (clique nela para ampliar) -->
+            <div class="guia-foto" data-zoom=""><img alt="Tabela de medidas e guia de tamanhos" loading="lazy"></div>
+          </div>
+        </details>
+        <!-- FIM: GUIA DE TAMANHOS -->
+        <!-- FILTROS RÁPIDOS: marque data-novo="sim" ou data-destaque="sim" no produto; promoção vem de data-promo -->
+        <div class="chips" id="chips"><button type="button" class="on" data-chip="">Todos</button><button type="button" data-chip="novo">Acabaram de chegar</button><button type="button" data-chip="destaque">Destaques</button><button type="button" data-chip="promo">Promoções</button></div>
+        <!-- INÍCIO: BUSCA E FILTROS -->
+        <form class="filtros" onsubmit="return false" aria-label="Filtros do catálogo">
+          <div><label for="f-busca">Buscar por nome</label><input id="f-busca" type="search" list="sugestoes" autocomplete="off" placeholder="Nome, cor ou característica"><datalist id="sugestoes"></datalist></div>
+          <div><label for="f-cat">Setor</label><select id="f-cat"><option value="">Todos</option></select></div>
+          <div><label for="f-tam">Tamanho</label><select id="f-tam"><option value="">Todos</option></select></div>
+          <div><label for="f-preco">Preço até (R$)</label><input id="f-preco" type="text" inputmode="decimal" placeholder="Ex.: 200"></div>
+          <div><label for="f-cor">Cor</label><select id="f-cor"><option value="">Todas</option></select></div>
+          <div><label for="f-ordem">Ordenar</label><select id="f-ordem"><option value="">Padrão</option><option value="menor">Menor preço</option><option value="maior">Maior preço</option></select></div>
+          <div class="check"><input id="f-disp" type="checkbox"><label for="f-disp">Só disponíveis</label></div>
+        </form>
+        <!-- FIM: BUSCA E FILTROS -->
+        <p class="sem-resultado" id="sem-resultado" hidden>Nenhuma peça encontrada. Ajuste os filtros ou preencha os produtos no index.html.</p>
+
+      <!-- CATEGORIA 1 — INÍCIO -->
+      <!-- INFORME O NOME DO SETOR em data-setor e no título h2 (mantenha os dois iguais) -->
+      <section class="setor" id="categoria-1" data-cat="1" data-setor="CATEGORIA 1 - O Clássico Listrado: Vestido Midi em Viscolycra com Detalhe em Botões">
+        <h2>CATEGORIA 1 — O Clássico Listrado: Vestido Midi em Viscolycra com Detalhe em Botões</h2>
+        <div class="grade">
+
+          <!-- PRODUTO 01 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p01" data-categoria="1" data-nome="Vestido Midi em Viscolycra com Detalhe em Botões" data-preco="89,90" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo1/listrado1.jpg" data-tamanhos="G e GG E XG" data-cores="MARROM E BRANCO" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 01 — FIM -->
+
+          <!-- PRODUTO 02 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p02" data-categoria="1" data-nome="Vestido Midi em Viscolycra com Detalhe em Botões" data-preco="89,90" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo1/listrado2.jpg" data-tamanhos="G E GG E XG" data-cores="VERDE E BRANCO" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 02 — FIM -->
+
+          <!-- PRODUTO 03 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p03" data-categoria="1" data-nome="Vestido Midi em Viscolycra com Detalhe em Botões" data-preco="89,90" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo1/listrado3.jpg" data-tamanhos="G E GG E XG" data-cores="PRETO E BRANCO" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 03 — FIM -->
+
+          <!-- PRODUTO 04 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p04" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 04 — FIM -->
+
+          <!-- PRODUTO 05 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p05" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 05 — FIM -->
+
+          <!-- PRODUTO 06 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p06" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 06 — FIM -->
+
+          <!-- PRODUTO 07 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p07" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 07 — FIM -->
+
+          <!-- PRODUTO 08 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p08" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 08 — FIM -->
+
+          <!-- PRODUTO 09 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p09" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 09 — FIM -->
+
+          <!-- PRODUTO 10 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p10" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 10 — FIM -->
+
+          <!-- PRODUTO 11 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p11" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 11 — FIM -->
+
+          <!-- PRODUTO 12 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p12" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 12 — FIM -->
+
+          <!-- PRODUTO 13 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p13" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 13 — FIM -->
+
+          <!-- PRODUTO 14 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p14" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 14 — FIM -->
+
+          <!-- PRODUTO 15 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p15" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 15 — FIM -->
+
+          <!-- PRODUTO 16 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p16" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 16 — FIM -->
+
+          <!-- PRODUTO 17 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p17" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 17 — FIM -->
+
+          <!-- PRODUTO 18 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p18" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 18 — FIM -->
+
+          <!-- PRODUTO 19 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p19" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 19 — FIM -->
+
+          <!-- PRODUTO 20 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c1p20" data-categoria="1" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 20 — FIM -->
+
+        </div>
+      </section>
+      <!-- CATEGORIA 1 — FIM -->
+
+      <!-- CATEGORIA 2 — INÍCIO -->
+      <!-- INFORME O NOME DO SETOR em data-setor e no título h2 (mantenha os dois iguais) -->
+      <section class="setor" id="categoria-2" data-cat="2" data-setor="CATEGORIA 2 — Vestido Midi Premium ">
+        <h2>CATEGORIA 2 — Vestido Midi Básico Canelado Premium Toque Algodão Com Bolsos</h2>
+        <div class="grade">
+
+          <!-- PRODUTO 01 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p01" data-categoria="2" data-nome="Vestido Midi Básico Canelado Premium Toque Algodão Com Bolsos" data-preco="69,90" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo2/vestido3.jpg" data-tamanhos="G E GG" data-cores="PRETO" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 01 — FIM -->
+
+          <!-- PRODUTO 02 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p02" data-categoria="2" data-nome="Vestido Midi Básico Canelado Premium Toque Algodão Com Bolsos" data-preco="69,90" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo2/vestido4.jpg" data-tamanhos="G E GG" data-cores="bege-nude" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 02 — FIM -->
+
+          <!-- PRODUTO 03 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p03" data-categoria="2" data-nome="Vestido Midi Básico Canelado Premium Toque Algodão Com Bolsos" data-preco="69,90" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo2/vestido2.jpg" data-tamanhos="G E GG" data-cores="marçala" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 03 — FIM -->
+
+          <!-- PRODUTO 04 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p04" data-categoria="2" data-nome="Vestido Midi Básico Canelado Premium Toque Algodão Com Bolsos" data-preco="69,90" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo2/vestido1.jpg" data-tamanhos="G E GG" data-cores="AZUL" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 04 — FIM -->
+
+          <!-- PRODUTO 05 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p05" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 05 — FIM -->
+
+          <!-- PRODUTO 06 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p06" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 06 — FIM -->
+
+          <!-- PRODUTO 07 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p07" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 07 — FIM -->
+
+          <!-- PRODUTO 08 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p08" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 08 — FIM -->
+
+          <!-- PRODUTO 09 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p09" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 09 — FIM -->
+
+          <!-- PRODUTO 10 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p10" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 10 — FIM -->
+
+          <!-- PRODUTO 11 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p11" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 11 — FIM -->
+
+          <!-- PRODUTO 12 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p12" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 12 — FIM -->
+
+          <!-- PRODUTO 13 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p13" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 13 — FIM -->
+
+          <!-- PRODUTO 14 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p14" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 14 — FIM -->
+
+          <!-- PRODUTO 15 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p15" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 15 — FIM -->
+
+          <!-- PRODUTO 16 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p16" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 16 — FIM -->
+
+          <!-- PRODUTO 17 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p17" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 17 — FIM -->
+
+          <!-- PRODUTO 18 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p18" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 18 — FIM -->
+
+          <!-- PRODUTO 19 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p19" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 19 — FIM -->
+
+          <!-- PRODUTO 20 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c2p20" data-categoria="2" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 20 — FIM -->
+
+        </div>
+      </section>
+      <!-- CATEGORIA 2 — FIM -->
+
+      <!-- CATEGORIA 3 — INÍCIO -->
+      <!-- INFORME O NOME DO SETOR em data-setor e no título h2 (mantenha os dois iguais) -->
+      <section class="setor" id="categoria-3" data-cat="3" data-setor="CATEGORIA 3 — Vestido Elegância Descontraída: Conforto em Viscolycra para o Dia a Dia.">
+       <h2>CATEGORIA 3 — Vestido Elegância Descontraída: Conforto em Viscolycra para o Dia a Dia.</h2>
+         <div class="grade">
+
+          <!-- PRODUTO 01 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p01" data-categoria="3" data-nome="Vestido Elegância Conforto em Viscolycra para o Dia a Dia." data-preco="79,90" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/CATALOGO3/PRETO.JPG" data-tamanhos="G E GG" data-cores="PRETO" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 01 — FIM -->
+
+          <!-- PRODUTO 02 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p02" data-categoria="3" data-nome="Vestido Elegância Conforto em Viscolycra para o Dia a Dia." data-preco="79,90" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/CATALOGO3/AZUL.JPG" data-tamanhos="G E GG" data-cores="AZUL" data-desc="AZUL" data-disponivel="sim"></article>
+          <!-- PRODUTO 02 — FIM -->
+
+          <!-- PRODUTO 03 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p03" data-categoria="3" data-nome="Vestido Elegância Conforto em Viscolycra para o Dia a Dia." data-preco="79,90" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/CATALOGO3/Verde.jpg" data-tamanhos="G E GG" data-cores="VERDE" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 03 — FIM -->
+
+          <!-- PRODUTO 04 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p04" data-categoria="3" data-nome="Vestido Elegância Conforto em Viscolycra para o Dia a Dia." data-preco="79,90" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/CATALOGO3/VINHO.JPG" data-tamanhos="G E GG" data-cores="VINHO" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 04 — FIM -->
+
+          <!-- PRODUTO 05 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p05" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 05 — FIM -->
+
+          <!-- PRODUTO 06 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p06" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 06 — FIM -->
+
+          <!-- PRODUTO 07 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p07" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 07 — FIM -->
+
+          <!-- PRODUTO 08 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p08" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 08 — FIM -->
+
+          <!-- PRODUTO 09 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p09" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 09 — FIM -->
+
+          <!-- PRODUTO 10 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p10" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 10 — FIM -->
+
+          <!-- PRODUTO 11 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p11" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 11 — FIM -->
+
+          <!-- PRODUTO 12 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p12" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 12 — FIM -->
+
+          <!-- PRODUTO 13 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p13" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 13 — FIM -->
+
+          <!-- PRODUTO 14 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p14" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 14 — FIM -->
+
+          <!-- PRODUTO 15 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p15" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 15 — FIM -->
+
+          <!-- PRODUTO 16 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p16" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 16 — FIM -->
+
+          <!-- PRODUTO 17 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p17" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 17 — FIM -->
+
+          <!-- PRODUTO 18 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p18" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 18 — FIM -->
+
+          <!-- PRODUTO 19 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p19" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 19 — FIM -->
+
+          <!-- PRODUTO 20 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c3p20" data-categoria="3" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 20 — FIM -->
+
+        </div>
+      </section>
+      <!-- CATEGORIA 3 — FIM -->
+
+      <!-- CATEGORIA 4 — INÍCIO -->
+      <!-- INFORME O NOME DO SETOR em data-setor e no título h2 (mantenha os dois iguais) -->
+      <section class="setor" id="categoria-4" data-cat="4" data-setor="CATEGORIA 4 — Vestido Feminino Confortável em Laise de Malha Estilo Midi">
+        <h2>CATEGORIA 4 — Vestido Feminino Confortável em Laise de Malha Estilo Midi</h2>
+        <div class="grade">
+
+          <!-- PRODUTO 01 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p01" data-categoria="4" data-nome="Vestido Feminino Confortável em Laise de Malha Estilo Midi" data-preco="99,99" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo4/marrom.jpg" data-tamanhos="M E G E GG E XG" data-cores="MARROMA" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 01 — FIM -->
+
+          <!-- PRODUTO 02 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p02" data-categoria="4" data-nome="Vestido Feminino Confortável em Laise de Malha Estilo Midi" data-preco="99,99" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo4/vermelho.jpg" data-tamanhos="M E G E GG E XG" data-cores="VERMELHO" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 02 — FIM -->
+
+          <!-- PRODUTO 03 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p03" data-categoria="4" data-nome="Vestido Feminino Confortável em Laise de Malha Estilo Midi" data-preco="99,99" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo4/azul.jpg" data-tamanhos="M E G E GG E XG" data-cores="AZUL" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 03 — FIM -->
+
+          <!-- PRODUTO 04 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p04" data-categoria="4" data-nome="Vestido Feminino Confortável em Laise de Malha Estilo Midi" data-preco="99,99" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo4/terra-cota.jpg" data-tamanhos="M E G E GG" data-cores="TERRA-COTA" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 04 — FIM -->
+
+          <!-- PRODUTO 05 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p05" data-categoria="4" data-nome="Vestido Feminino Confortável em Laise de Malha Estilo Midi" data-preco="99,99" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo4/branco.jpg" data-tamanhos="M E G E GG E XG " data-cores="BRANCO" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 05 — FIM -->
+
+          <!-- PRODUTO 06 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p06" data-categoria="4" data-nome="Vestido Feminino Confortável em Laise de Malha Estilo Midi" data-preco="99,99" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="fotos/catalogo4/azulclaro.jpg" data-tamanhos="M E G E GG E XG" data-cores="AZUL-CLARO" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 06 — FIM -->
+
+          <!-- PRODUTO 07 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p07" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 07 — FIM -->
+
+          <!-- PRODUTO 08 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p08" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 08 — FIM -->
+
+          <!-- PRODUTO 09 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p09" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 09 — FIM -->
+
+          <!-- PRODUTO 10 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p10" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 10 — FIM -->
+
+          <!-- PRODUTO 11 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p11" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 11 — FIM -->
+
+          <!-- PRODUTO 12 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p12" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 12 — FIM -->
+
+          <!-- PRODUTO 13 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p13" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 13 — FIM -->
+
+          <!-- PRODUTO 14 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p14" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 14 — FIM -->
+
+          <!-- PRODUTO 15 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p15" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 15 — FIM -->
+
+          <!-- PRODUTO 16 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p16" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 16 — FIM -->
+
+          <!-- PRODUTO 17 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p17" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 17 — FIM -->
+
+          <!-- PRODUTO 18 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p18" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 18 — FIM -->
+
+          <!-- PRODUTO 19 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p19" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 19 — FIM -->
+
+          <!-- PRODUTO 20 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c4p20" data-categoria="4" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 20 — FIM -->
+
+        </div>
+      </section>
+      <!-- CATEGORIA 4 — FIM -->
+
+      <!-- CATEGORIA 5 — INÍCIO -->
+      <!-- INFORME O NOME DO SETOR em data-setor e no título h2 (mantenha os dois iguais) -->
+      <section class="setor" id="categoria-5" data-cat="5" data-setor="CATEGORIA 5 — NOME EDITÁVEL">
+        <h2>CATEGORIA 5 — NOME EDITÁVEL</h2>
+        <div class="grade">
+
+          <!-- PRODUTO 01 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p01" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 01 — FIM -->
+
+          <!-- PRODUTO 02 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p02" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 02 — FIM -->
+
+          <!-- PRODUTO 03 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p03" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 03 — FIM -->
+
+          <!-- PRODUTO 04 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p04" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 04 — FIM -->
+
+          <!-- PRODUTO 05 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p05" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 05 — FIM -->
+
+          <!-- PRODUTO 06 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p06" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 06 — FIM -->
+
+          <!-- PRODUTO 07 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p07" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 07 — FIM -->
+
+          <!-- PRODUTO 08 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p08" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 08 — FIM -->
+
+          <!-- PRODUTO 09 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p09" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 09 — FIM -->
+
+          <!-- PRODUTO 10 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p10" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 10 — FIM -->
+
+          <!-- PRODUTO 11 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p11" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 11 — FIM -->
+
+          <!-- PRODUTO 12 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p12" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 12 — FIM -->
+
+          <!-- PRODUTO 13 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p13" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 13 — FIM -->
+
+          <!-- PRODUTO 14 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p14" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 14 — FIM -->
+
+          <!-- PRODUTO 15 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p15" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 15 — FIM -->
+
+          <!-- PRODUTO 16 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p16" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 16 — FIM -->
+
+          <!-- PRODUTO 17 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p17" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 17 — FIM -->
+
+          <!-- PRODUTO 18 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p18" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 18 — FIM -->
+
+          <!-- PRODUTO 19 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p19" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 19 — FIM -->
+
+          <!-- PRODUTO 20 — INÍCIO -->
+          <!-- data-nome: ESCREVA O NOME DO VESTIDO AQUI | data-preco: INFORME O PREÇO AQUI (ex.: 120,00) -->
+          <!-- data-foto: ADICIONE A FOTOGRAFIA AQUI (ex.: img/vestido1.jpg; várias separadas por vírgula) -->
+          <!-- data-tamanhos: INFORME OS TAMANHOS (ex.: P,M,G) | data-cores: INFORME AS CORES | data-desc: DESCRIÇÃO -->
+          <!-- data-promo: preço promocional opcional | data-detalhes: tecido, modelagem e características -->
+          <!-- data-disponivel: "sim" ou "nao". Espaço sem nome ou preço fica oculto para o público -->
+          <article class="produto" data-id="c5p20" data-categoria="5" data-nome="" data-preco="" data-promo="" data-novo="" data-destaque="" data-detalhes="" data-foto="" data-tamanhos="" data-cores="" data-desc="" data-disponivel="sim"></article>
+          <!-- PRODUTO 20 — FIM -->
+
+        </div>
+      </section>
+      <!-- CATEGORIA 5 — FIM -->
+
+      </div>
+    </section>
+    <!-- FIM: CATÁLOGO DE VESTIDOS -->
+
+    <!-- INÍCIO: BENEFÍCIOS (edite os textos livremente) -->
+    <section class="secao" id="beneficios">
+      <div class="container beneficios">
+        <div><h3>Pedido pelo WhatsApp</h3><p>Monte sua sacola e envie o pedido direto para a Regina.</p></div>
+        <div><h3>Atendimento direto</h3><p>Disponibilidade, entrega e pagamento combinados com a loja.</p></div>
+        <div><h3>Sem cobrança no site</h3><p>Você só paga depois de combinar tudo com a Regina.</p></div>
+      </div>
+    </section>
+    <!-- FIM: BENEFÍCIOS -->
+
+    <!-- INÍCIO: AJUDA E PERGUNTAS FREQUENTES (edite perguntas e respostas aqui no HTML) -->
+    <section class="secao" id="ajuda">
+      <div class="container">
+        <h2>Precisa de ajuda?</h2>
+        <details><summary>Como faço meu pedido?</summary><p>Adicione os vestidos à sacola, preencha seus dados e envie a mensagem pelo WhatsApp.</p></details>
+        <details><summary>O pedido já fica confirmado?</summary><p>Não. Ele só é confirmado depois que a Regina verificar a disponibilidade e combinar os detalhes com você.</p></details>
+        <details><summary>Como funciona entrega e pagamento?</summary><p>São combinados diretamente com a Regina pelo WhatsApp.</p></details>
+        <a class="btn" href="#" data-zap>Falar pelo WhatsApp</a>
+      </div>
+    </section>
+    <!-- FIM: AJUDA -->
+
+    <!-- INÍCIO: SOBRE A LOJA -->
+    <section class="secao sobre" id="sobre">
+      <div class="container">
+        <h2>Sobre a loja</h2>
+        <!-- ESCREVA AQUI A HISTÓRIA DA LOJA E A APRESENTAÇÃO DA REGINA (texto ainda não informado) -->
+        <p>Descubra a beleza de vestir com elegância! Nossos vestidos são pensados para valorizar sua feminilidade, realçar sua beleza e proporcionar conforto em todos os momentos. Com modelos encantadores, caimento impecável e detalhes especiais, você encontra o look perfeito para se sentir confiante, sofisticada e maravilhosa em qualquer ocasião. ❤️❤️</p>
+      </div>
+    </section>
+    <!-- FIM: SOBRE A LOJA -->
+
+    <!-- INÍCIO: CONTATO -->
+    <section class="secao contato" id="contato">
+      <div class="container">
+        <h2>Contato</h2>
+        <p><strong>Endereço:</strong> <span data-cfg="endereco"></span></p>
+        <p><strong>Horário:</strong> <span data-cfg="horario"></span></p>
+        <p><strong>Importante:</strong> o pedido só é confirmado depois que a Regina verificar a disponibilidade e combinar entrega e pagamento com você. Não há cobrança pelo site.</p>
+        <a class="btn" href="#" data-zap>Conversar pelo WhatsApp</a>
+      </div>
+    </section>
+    <!-- FIM: CONTATO -->
+  </main>
+
+  <!-- INÍCIO: RODAPÉ -->
+  <footer class="rodape"><div class="container">
+    <div class="confianca">
+      <div><strong>Pedido pelo WhatsApp</strong>Monte a sacola e envie direto para a Regina.</div>
+      <div><strong>Atendimento direto</strong>Dúvidas sobre peças, tamanhos e cores.</div>
+      <div><strong>Sem cobrança no site</strong>O pagamento é combinado com a loja.</div>
+      <div><strong>Confirmação pela loja</strong>O pedido vale após a Regina confirmar.</div>
+    </div>
+    <div class="rodape-colunas">
+      <div><h3>Atual Fashion Regiana</h3><p data-cfg="endereco"></p><p data-cfg="horario"></p></div>
+      <div><h3>Ajuda</h3><a href="#ajuda">Perguntas frequentes</a><a href="#" data-zap>Falar pelo WhatsApp</a></div>
+      <div><h3>Navegue</h3><a href="#catalogo">Catálogo</a><a href="#sobre">Sobre a loja</a><a href="#contato">Contato</a></div>
+    </div>
+    <p class="rodape-fim">© Atual Fashion Regiana</p>
+  </div></footer>
+  <a class="zap-flutuante" href="#" data-zap aria-label="Conversar no WhatsApp">WhatsApp</a>
+
+  <!-- INÍCIO: CARRINHO LATERAL -->
+  <div class="fundo-escuro" id="fundo" hidden></div>
+  <aside class="carrinho" id="carrinho" aria-hidden="true" aria-label="Carrinho de compras">
+    <header><h2>Meu carrinho</h2><button type="button" id="fechar-carrinho" aria-label="Fechar carrinho">×</button></header>
+    <div class="corpo">
+      <div id="etapa-itens"><div id="carrinho-itens"></div></div>
+      <!-- INÍCIO: MINI CADASTRO (aparece depois de "Continuar") -->
+      <form class="form-pedido" id="form-pedido" hidden novalidate>
+        <h3>Seus dados</h3>
+        <label>Nome completo<input name="nome" autocomplete="name" required></label>
+        <label>Celular com DDD<input name="cel" type="tel" autocomplete="tel" placeholder="(62) 90000-0000" required></label>
+        <label>Rua<input name="rua" autocomplete="address-line1" required></label>
+        <div class="linha"><label>Número<input name="num" required></label><label>Bairro<input name="bairro" required></label></div>
+        <div class="linha"><label>Cidade<input name="cidade" required></label><label>CEP<input name="cep" inputmode="numeric" placeholder="00000-000" required></label></div>
+        <label>Complemento ou referência (opcional)<input name="comp"></label>
+        <label>Deixe sua mensagem ou dúvida<textarea name="msg" rows="3" maxlength="500" placeholder="Ex.: Tem esse vestido em outra cor?"></textarea></label>
+        <input class="oculto-hp" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label class="check"><input type="checkbox" name="lgpd"> <span>Concordo que meus dados sejam usados só para atender este pedido, conforme a LGPD.</span></label>
+        <p class="erro" id="erro-form" role="alert"></p>
+        <button class="btn btn-bloco" type="submit">FINALIZAR PEDIDO PELO WHATSAPP</button>
+        <button class="btn btn-claro btn-bloco" type="button" id="btn-voltar">Voltar ao carrinho</button>
+      </form>
+    </div>
+    <div class="rodape-carrinho">
+      <div class="total"><span>Total estimado</span><span id="total">R$ 0,00</span></div>
+      <p class="aviso">Valores estimados. O pedido só é confirmado após a Regina verificar a disponibilidade e combinar pagamento e entrega com você.</p>
+      <button class="btn btn-bloco" type="button" id="btn-continuar" disabled>Continuar</button>
+    </div>
+  </aside>
+  <!-- FIM: CARRINHO LATERAL -->
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
